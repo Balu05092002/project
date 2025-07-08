@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head><title>Employee List</title></head>
+<body>
+  <h2>Registered Employees</h2>
+  <a href="/register">Add New</a>
+  <table border="1" cellpadding="5">
+    <tr>
+      <th>Serial No.</th>
+      <th>Name</th>
+      <th>Employee ID</th>
+      <th>Designation</th>
+      <th>Department</th>
+    </tr>
+    {% for emp in employees %}
+    <tr>
+      <td>{{ emp.serial_no }}</td>
+      <td>{{ emp.name }}</td>
+      <td>{{ emp.emp_id }}</td>
+      <td>{{ emp.designation }}</td>
+      <td>{{ emp.department }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+</body>
+</html>
